@@ -1,6 +1,6 @@
-# IS 5313 Fndns of Infor. & Elect. Bus. Sys（信息与电子商务系统基础）
+# IS 5313 Fndns of Infor. & Elect. Bus. Sys
 
-# Week 1（第一周：认识 Information Systems / 信息系统）
+# Week 1（第一周：认识 Information Systems）
 
 **主线：Digital Density（数字密度）→ Data / Information / Knowledge（数据 / 信息 / 知识）→ Information System（信息系统）→ Socio-Technical Perspective（社会技术视角）→ Three Dimensions（三维模型）→ Complementary Assets（互补资产）**
 

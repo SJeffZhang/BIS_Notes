@@ -1000,6 +1000,10 @@ PPT 还列出存储设计需要考虑的特征：
 
 ### Client-Server vs. Peer-to-Peer（客户机-服务器与点对点网络）
 
+![Server-client 与 Peer-to-peer 网络结构对比](assets/w4-slide31-network-models.png)
+
+*课件原图：W4 第 31 页。*
+
 **Server-Client Network（服务器-客户端网络）**
 
 > **Server（服务器）**为 **Clients（客户端）**提供集中式的资源或服务。
@@ -1084,13 +1088,11 @@ PPT 用 **Google Search（谷歌搜索）**作为实例：
 >
 > **中文**：信息系统架构是对组织中用于支持特定业务流程和战略的**技术、系统与流程**所作的正式描述。
 
-PPT 第 39 页的 Google Search（谷歌搜索）示意结构：
+![Google 搜索架构：索引、前端、分布式计算与存储及数据中心](assets/w4-slide39-google-search-architecture.png)
 
-- **Indexing Pipeline（索引构建流程）**：Crawl & Build Index（抓取并建立索引）。
-- **Search Front End（搜索前端）**：接收并处理用户发起的搜索。
-- **Distributed Compute（分布式计算）**：Query Processing（查询处理）、Ranking（排序）和 Ads Serving（广告提供）。
-- **Distributed Storage（分布式存储）**：保存 Web Index（网页索引）、Documents（文档）、Metadata（元数据）。
-- **Global Infrastructure / Data Centers（全球基础设施 / 数据中心）**：提供 Servers（服务器）、Storage（存储）、Network（网络）和 Cooling（冷却）。
+*课件原图：W4 第 39 页。*
+
+**读图**：**Indexing Pipeline（索引构建流程）**抓取并建立索引；用户查询经 **Search Front End（搜索前端）**进入 **Distributed Compute（分布式计算）**。计算与 **Distributed Storage（分布式存储）**交互，底层由 **Global Infrastructure / Data Centers（全球基础设施 / 数据中心）**支撑。
 
 **一条重要的逻辑链：**
 
@@ -1221,15 +1223,13 @@ PPT 第 40 页讨论基础设施如何回应不断变化的需求：
 
 ### Click-and-Mortar 的三个层次（线上线下渠道整合）
 
-> **Multi-channel（多渠道）→ Cross-channel（跨渠道）→ Omni-channel（全渠道）**
->
-> **Presence（渠道存在）→ Connection（渠道连接）→ Integration（渠道整合）**
+![Multi-channel、Cross-channel 与 Omni-channel 的渠道整合对比](assets/w5-slide17-channel-integration.png)
 
-- **Multi-channel（多渠道）**：同时有 App / 网站 / 实体店，但渠道相对独立。重点是 **Presence（有这些渠道）**。
-- **Cross-channel（跨渠道）**：渠道之间开始连接，例如 **online order → in-store pickup（线上下单 → 门店自提）**。重点是 **Connection（渠道衔接）**。
-- **Omni-channel（全渠道）**：线上线下的库存、信息和体验更深入地整合，例如扫码查库存、跨渠道下单及履约。重点是 **Integration（整合）**。
+*课件原图：W5 第 17 页（PDF 第 16 页）。*
 
-> **Omni-channel（全渠道）不只是渠道更多，而是不同渠道能共同完成一个消费者旅程。**
+- **Multi-channel（多渠道）＝ Presence（渠道存在）**：App、网站、门店并存，但相对独立。
+- **Cross-channel（跨渠道）＝ Connection（渠道连接）**：例如 online order → in-store pickup（线上下单 → 门店自提）。
+- **Omni-channel（全渠道）＝ Integration（渠道整合）**：共享库存与用户信息，让线上线下共同完成同一消费者旅程。
 
 ## Capabilities Created by E-Tailing（网络零售带来的能力）
 
@@ -1257,12 +1257,12 @@ PPT 第 40 页讨论基础设施如何回应不断变化的需求：
 >
 > **中文**：长尾是指除了销售主流产品之外，还服务于**小众市场（niche markets）**，或主要满足这些小众需求。
 
-- **Head（头部）**：少数热门产品（mainstream products，主流产品），单个产品需求高。
-- **Long Tail（长尾部分）**：大量小众产品（niche products），单个产品需求低，但合起来可以构成一个重要市场。
-- 互联网使小众商品更容易被发现和分发：**Lower distribution & matching costs（降低分销成本和供需匹配成本）**。
+![长尾效应：少数热门产品与大量小众产品的需求分布](assets/w5-slide24-long-tail.png)
 
-> 传统货架往往优先卖畅销品；线上平台可以更容易满足分散的小众需求。
->
+*课件原图：W5 第 24 页（PDF 第 23 页）。*
+
+**读图**：**Head（头部）**是少数高需求的热门产品；**Long Tail（长尾）**是大量单个需求低、合计市场可观的小众产品。互联网通过 **Lower distribution & matching costs（更低的分销与匹配成本）**让长尾更容易被服务。
+
 > **Long tail（长尾）≠ 冷门商品比爆款更畅销；它强调大量小众需求的集合价值。**
 
 ### Mass Customization（大规模定制）
@@ -1386,9 +1386,9 @@ PPT 第 40 页讨论基础设施如何回应不断变化的需求：
 
 > **“Make me interested.”（让我产生兴趣。）** 用户更在意呈现效果和吸引力。
 
-**Zone of Tolerance（容忍区间）**
+**Zone of Intolerance（不可容忍区间）**
 
-> 即使网页偏向美观或偏向功能，其他维度也不能跌破基本可接受水平。
+> 低于 **Minimum Acceptable Level（最低可接受水平）**的区域。各维度都须达到基本要求，具体曲线见 W6 的网站设计原图。
 
 ### Step 3：Trusted Payment（第三步：可信支付 / 完成交易）
 
@@ -1639,11 +1639,11 @@ PPT 还给出不同企业选择营销渠道的讨论题，如护肤品牌进入�
 - **Hedonic Web Page（享乐 / 体验导向网页）**：例如品牌展示页。**“Make me interested”（让我产生兴趣）**，更加重视视觉吸引力。
 - **Hybrid Web Page（混合型网页）**：兼顾功能性和体验性。
 
-**Zone of Tolerance（容忍区间）**
+![不同网页目的下的客户需求曲线与最低可接受水平](assets/w6-slide33-website-needs.png)
 
-> 各维度即使不是页面主打卖点，也必须达到用户的 **Minimum Acceptable Level（最低可接受水平）**。
->
-> **美观不能补救彻底坏掉的功能；功能完整也不代表一个品牌展示页足够吸引人。**
+*课件原图：W6 第 33 页；原图来源为 Information Systems Today，Figure 4.9。*
+
+**Zone of Intolerance（不可容忍区间）**：图中最低可接受水平以下的区域。曲线表示不同网页对三项需求的相对重视程度；即使某维度不是页面主打卖点，也不能跌破 **Minimum Acceptable Level（最低可接受水平）**。
 
 *PPT 第 29–33 页，尤其第 31–33 页的折线示意图。*
 
@@ -1722,19 +1722,13 @@ PPT 把 **Lower Transaction Fee（潜在较低交易手续费）** 和 **No Trus
 
 PPT 第 49 页最重要的是分清 **平台 B 到底做什么，是否取得商品所有权（ownership）**。
 
-| Model（模式） | Role of B（B 的角色） | Ownership（所有权） |
-|---|---|---|
-| **C2C Marketplace（C2C 交易市场）** | **Matching（供需匹配）**：在卖家 A 和买家 C 之间撮合交易 | B 不作为商品买入方 |
-| **Managed C2C（平台管理型 C2C）** | **Authentication / Intermediation（鉴定 / 中介服务）**：提供交易支持，可能帮助检验商品 | **B does not take ownership（B 不取得商品所有权）** |
-| **C2B2C Resale（C2B2C 转售）** | **Purchase and Resell（先收购再转售）**：B 从 A 买入，然后再卖给 C | B 在转售链条中先取得商品所有权 |
+![C2C Marketplace、Managed C2C 与 C2B2C Resale 的平台角色和所有权对比](assets/w6-slide49-c2c-platform-models.png)
 
-**交易关系（记忆版）：**
+*课件原图：W6 第 49 页。*
 
-> **C2C Marketplace（撮合交易）**：Seller A（卖家）→ Platform B（撮合平台）→ Buyer C（买家）
->
-> **Managed C2C（管理交易）**：Seller A（卖家）→ Platform B（鉴定 / 中介，但不收购）→ Buyer C（买家）
->
-> **C2B2C Resale（先收再卖）**：Seller A（卖家）→ Business B（收购并持货的商家）→ Buyer C（买家）
+- **C2C Marketplace（C2C 交易市场）**：B 负责 **Matching（供需匹配）**，不作为商品买入方。
+- **Managed C2C（平台管理型 C2C）**：B 提供 **Authentication / Intermediation（鉴定 / 中介服务）**，**不取得商品所有权**。
+- **C2B2C Resale（C2B2C 转售）**：B **Purchase and Resell（先收购再转售）**，在转售前取得商品所有权。
 
 > **考试区分点：Matching（撮合）≠ Authentication（鉴定）≠ Ownership & Resale（取得所有权并转售）。**
 >

@@ -1780,3 +1780,253 @@ PPT 第 49 页最重要的是分清 **平台 B 到底做什么，是否取得商
 - **Slides（幻灯片）**：包含 Team Introduction（团队介绍）、Individual Contributions（个人贡献）及 GenAI Usage Disclosure（生成式 AI 使用披露）。
 - **Project Task（项目任务）**：明确企业问题 → 提出 IS → 说明所需信息 → 解释价值 → 分析基础设施、挑战与风险。
 - **Grading（评分）**：25% of course grade（占总成绩 25%）；Instructor Assessment（教师评分）20% + Peer Evaluation（组内互评）5%。
+
+---
+
+# Week 7（第七周：Enterprise Systems / 企业系统）
+
+**主线：Core Business Processes（核心业务流程）→ Enterprise Systems（企业系统）→ Implementation Decisions（实施决策）→ ERP（企业资源规划）→ SCM（供应链管理）**
+
+## Core Business Processes（核心业务流程）
+
+### Functional Areas vs. Business Processes（职能领域与业务流程）
+
+**Functional Area（职能领域）**负责一类特定活动，如 Marketing（营销）、Accounting & Finance（会计与财务）、Manufacturing & Production（制造与生产）、Human Resources（人力资源）。
+
+**Most business processes cross the boundaries of business functions.（多数业务流程跨越职能边界。）** 一笔销售从接单、查库存、发货到收款，需要多个部门协作。
+
+*PPT 第 5–6 页。*
+
+### Order-to-Cash（订单到收款）与 Procure-to-Pay（采购到付款）
+
+| Process（流程） | 课件定义 | 主要关注 |
+|---|---|---|
+| **Order-to-Cash（订单到收款）** | Processes associated with **selling a product or service（销售产品或服务）** | **Customer Satisfaction（客户满意度）** |
+| **Procure-to-Pay（采购到付款）** | Processes associated with **procuring goods from external vendors（向外部供应商采购商品）** | **Decreased Cost per Transaction（降低每笔交易成本）**，并争取更好的价格与交易条件 |
+
+**Order-to-Cash 的步骤：**
+
+> Create Customer Record（建立客户记录）→ Check Credit（检查信用）→ Create Order（创建订单）→ Allocate Stock（分配库存）→ Pick, Pack and Ship（拣货、包装、发运）→ Prepare and Send Invoice（开具并发送发票）→ Collect Payment（收款）。
+
+**Procure-to-Pay 的步骤：**
+
+> Negotiate Price and Terms（协商价格与条款）→ Issue Purchase Order（发出采购订单）→ Receive Goods（收货）→ Receive Invoice（收到发票）→ Settle Payment（付款结算）。
+
+**区分角度**：前者面向 **Customer（客户）**，最终收款；后者面向 **Vendor / Supplier（供应商）**，最终付款。采购条件还包括 **Quality Guarantees（质量保证）**、**Payment Terms（付款条件）**，不只看价格。
+
+*PPT 第 7–9 页；*
+
+### Make-to-Stock vs. Make-to-Order（按库存生产与按订单生产）
+
+| 维度 | Make-to-Stock（MTS，按库存生产） | Make-to-Order（MTO，按订单生产） |
+|---|---|---|
+| **Logic（逻辑）** | **Push-based（推式）**：先生产并备货 | **Pull-based（拉式）**：由销售订单拉动生产 |
+| **Flow（流程）** | 采购投入 → 排产 → 生产 → 质检 → 成品入库 | 处理销售订单 →（按需）设计 / 工程处理 → 采购投入 → 排产 → 生产 → 质检 → 发货 |
+| **Management Focus（管理重点）** | 生产计划、成品库存与备货 | 订单衔接、生产安排与交付时间 |
+
+课件要求结合 **Production Planning（生产计划） / Inventory Management（库存管理） / Delivery Time（交付时间）**比较两者。
+
+> **辅助理解**：MTS 需要权衡备货与积压，MTO 需要权衡订单响应与生产等待。MTO 也可能持有原材料或零部件库存，不能理解为“完全没有库存”。
+
+*PPT 第 10 页。*
+
+### Supply Chain（供应链）把流程串起来
+
+课件以书籍供应链为例：**Tree Farmer（林木供应者）→ Paper Mill（造纸厂）→ Book Printer（印刷商）→ Bookseller（书商）→ Customer（客户）**。
+
+**辅助理解**：同一笔交易，对卖方属于 Order-to-Cash，对买方属于 Procure-to-Pay；生产环节还要衔接 MTS / MTO。上游与下游的流程相连，形成整条供应链。
+
+*PPT 第 11–12 页。*
+
+## Enterprise Systems（企业系统）：为什么需要整合？
+
+### Best-of-Breed vs. Enterprise System（各领域最优系统与企业整合系统）
+
+| Approach（方式） | 含义 | 复习重点 |
+|---|---|---|
+| **Best-of-Breed（各领域最优）** | A suite of independent systems that are the best systems within their respective areas（在各自领域选择最优的独立系统） | 单项功能适配与跨系统衔接是不同问题 |
+| **Enterprise System（ES，企业系统）** | An integrated suite of business applications for virtually every business process（覆盖企业几乎所有业务流程的集成应用套件） | 在企业范围内 **Integrate Data across Functional Areas（跨职能整合数据）** |
+
+**Standalone Applications（独立应用） / Legacy Systems（遗留系统）**可以满足特定业务活动，但不同部门分别保存数据时，信息容易隔离，跨部门流程难以协调。
+
+![企业系统整合前后：部门独立数据库与共享数据库](assets/w7-slide17-central-database.png)
+
+*课件原图：W7 第 17 页（PDF 第 16 页）；源图参见 Information Systems Today，Figures 7.9、7.10。*
+
+**读图**：左侧 Sales DB（销售库）、Inventory DB（库存库）、Finance DB（财务库）各自保存记录；右侧将 Sales Orders（销售订单）、Inventory（库存）、Customers（客户）、Invoices（发票）关联到共享数据库。整合重点是让相关业务使用相互关联的数据。
+
+*PPT 第 14–18 页。*
+
+### Internal vs. External Focus（内部整合与外部协同）
+
+- **Internally Focused Systems（面向内部的系统）**：支持组织内部的职能、业务流程与决策，例如 **ERP**。
+- **Externally Focused Systems（面向外部的系统）**：协调组织边界之外的通信与业务流程，例如面向上游供应商的 **SCM**、面向下游客户的 **CRM（Customer Relationship Management，客户关系管理）**。
+
+> **ERP 看企业内部整合；SCM 看供应链协同；CRM 看客户关系。** 这是课件的侧重点区分，系统之间可以集成。
+
+*PPT 第 19–20、30 页。*
+
+## Key Decisions in ES Implementation（企业系统实施决策）
+
+![企业系统实施：自建或购买、适配判断、流程调整、定制与配置](assets/w7-slide29-implementation-decisions.png)
+
+*课件原图：W7 第 29 页（PDF 第 28 页）。*
+
+### Buy or Build?（购买还是自建？）
+
+- **Packaged / Off-the-Shelf Software（套装 / 现成软件）**：面向 **Common Needs（共同需求）**，课件强调 **Cost-effective（成本效益）**。
+- **Build / Customized Software（自建 / 定制软件）**：面向 **Specific Needs（特定需求）**，追求 **Better Fit（更好适配）**。
+
+购买标准软件后，要先判断 **Does standard software fit?（标准软件是否适配？）**。适配时可使用 **Vanilla Version（标准、未定制版本）**；有差距时，课件给出 **Adjust Processes（调整业务流程）**和 **Customization（软件定制）**两条处理路径。
+
+*PPT 第 21–24、28–29 页。*
+
+### BPM / Customization / Configuration（三个概念分清楚）
+
+| Concept（概念） | 改变什么？ | 关键点 |
+|---|---|---|
+| **Business Process Management（BPM，业务流程管理）** | 检视、重新思考并设计业务流程 | 改善 **Quality（质量） / Cycle Time（周期时间） / Cost（成本）**等绩效 |
+| **Customization（软件定制）** | 修改软件以满足特定需求 | 更贴合需求，但要考虑 **Ongoing Maintenance and Upgrade（持续维护与升级）** |
+| **Configuration（配置）** | 将业务流程与规则转化为系统设置 | 设置 **Data Format（数据格式） / Business Rules（业务规则） / Process Settings（流程设置）** |
+
+**BPM 的课件定义**：a systematic, structured improvement approach whereby people critically examine, rethink, and redesign business processes（有系统、有结构地检视、重新思考与重新设计流程的改进方式）。
+
+**辅助理解（按第 27 页示意图归纳）**：先明确愿景与目标，再梳理流程、衡量表现，并用信息系统支持流程改进。BPM 的对象是业务流程，不限于安装一套软件。
+
+配置的课件例子：Customer ID（客户编号格式）、Overdue Bills（逾期账款规则）、Approval Workflows（审批流程）。
+
+> **Vanilla（标准版本）也需要 Configuration（配置）；Configuration（调整设置）与 Customization（修改软件）要区分。** 采用基于 **Best Practices（最佳实践）**的软件，也可能需要组织调整原有工作方式。
+
+*PPT 第 24–29、44 页。*
+
+## Enterprise Resource Planning（ERP，企业资源规划）
+
+### Definition & Three Features（定义与三项特征）
+
+> **ERP systems provide various modules based on a common database and similar application interfaces that serve the entire enterprise rather than portions of it.**
+>
+> **中文**：ERP 基于共同数据库和相似的应用界面提供多个模块，服务整个企业，而不只是某个局部部门。
+
+**Common Database（共同数据库）+ Integrated Functional Modules（集成职能模块）+ Consistent Interfaces（一致界面）**。
+
+ERP 由 **MRP / MRP II**演进而来，其作用已经超出单纯的“资源计划”。
+
+*PPT 第 31 页。*
+
+### Benefits（收益）：Global Integration & Compliance（全球整合与合规）
+
+- **Global Integration（全球整合）**：支持 **Cross-functional（跨职能） / Cross-geographical（跨地域）**协作，以及 **Currency and Unit Conversions（货币与单位换算）**。
+- **Regulatory Compliance and Auditing（法规遵循与审计）**：通过 **Access Control（访问控制）**、**Segregation of Duties（职责分离）**、**Documentation（文档记录）**、**Audit Trails（审计轨迹）**，使流程更 **Standardized（标准化） / Transparent（透明） / Traceable（可追溯）**。
+
+> 共享数据仍须配合权限与职责分工。整合并不代表所有人都可以查看或修改所有数据。
+
+*PPT 第 32–33 页。*
+
+### Choosing an ERP（ERP 选型）：Control & Business Requirements
+
+**1. ERP Control（控制权）**：谁控制 **Computing Systems（计算系统）**、**Data（数据）**与 **Decision-making Authority（决策权）**？
+
+- **Centralized Control（集中控制）**：控制与决策较集中在总部或中心层级。
+- **Decentralized Control（分散控制）**：控制与决策较分散在分支或业务单位。
+
+**辅助理解**：这里关注的是控制权分布，不能只按“服务器放在哪里”判断。
+
+**2. ERP Business Requirements（业务需求）**：根据需要选择模块，考虑 **Modular Approach（模块化方式）**及 **Industry Solutions（行业解决方案）**。
+
+| Components（组件） | Focus（侧重） | 课件列出的模块 |
+|---|---|---|
+| **Core（核心组件）** | **Internal（内部）** | Financial Management（财务管理）、Operations Management（运营管理）、Human Resource Management（人力资源管理） |
+| **Extended（扩展组件）** | **External（外部）** | Supply Chain Management（SCM，供应链管理）、Customer Relationship Management（CRM，客户关系管理） |
+
+**SCM / CRM 可以作为扩展组件与 ERP 集成，也可以有独立系统；不能把所有企业软件都直接等同于 ERP。**
+
+*PPT 第 34–38 页。*
+
+### ERP Supports Processes（ERP 如何支持业务流程）
+
+- **Order-to-Cash / Procure-to-Pay**：联结 **Operations Management（运营管理）**与 **Financial Management（财务管理）**，把订单、收发货、账单及收付款衔接起来。
+- **MTS / MTO**：由 **Operations Management（运营管理）**支持生产相关流程。
+- 其他模块支持 **Human Resource Management（人力资源管理）**及 **Industry-specific Processes（行业专属流程）**，如航空制造、房地产、零售。
+
+*PPT 第 39–43 页。*
+
+### Limitations & Implementation（局限与实施）
+
+**System Lock-in（系统锁定）**：高度整合也可能限制组织面对新外部挑战时的 **Flexibility（灵活性）**与 **Agility（敏捷性）**。
+
+> **Trade-off between Integration and Flexibility（整合与灵活性之间的权衡）**。
+
+课件列出的实施要点：
+
+1. **Secure Executive Sponsorship（获得高层支持）**。
+2. **Get Help from Outside Experts（借助外部专家）**。
+3. **Thoroughly Train Users（充分培训用户）**。
+4. **Take a Multidisciplinary Approach（由多学科团队共同实施）**。
+5. **Evolve the Implementation（持续演进）**：考虑 **Cloud-based Solutions（云端方案）**、**Real-time Business Management（实时业务管理）**。
+
+这与 W1 的 **Complementary Assets（互补资产）**相呼应：技术整合还需要管理支持、人员能力和组织协作。
+
+*PPT 第 45–46 页。*
+
+## Supply Chain Management（SCM，供应链管理）
+
+### Supply Chain → Supply Network（供应链与供应网络）
+
+**Supply Chain（供应链）**包含从原材料获取、零部件供应、最终生产到客户的一系列企业与流程。现实中企业连接多个供应商与客户，因而更接近 **Supply Network（供应网络）**。
+
+- **Upstream（上游）**：供应商及其供应商。
+- **Downstream（下游）**：客户及后续销售、分销等环节。
+- **Global Sourcing & Coordination（全球采购与协同）**：跨地区协调供应活动。
+- **Ripple Effects（涟漪效应）**：一个供应商中断，可能影响整个网络；风险监控需要覆盖 **Extended Supply Chain（延伸供应链）**。
+
+*PPT 第 49、52 页。*
+
+### Supplier Relationships（供应商关系）：稳定可靠的供应
+
+**A steady and reliable source of supply（稳定可靠的供给来源）**要求：**Right Quantity（合适数量）、Right Quality（合适质量）、Right Price（合适价格）、Right Time（合适时间）**。
+
+课件强调与有限数量、审慎挑选的供应商建立 **Long-term B2B Relationships（长期企业间关系）**，通过 **Mutual Dependence and Coordination（相互依赖与协调）**共享信息、协调活动。
+
+> 评价供应商还要看供应可靠性与协同能力，不能只比较采购价格和商品质量。
+
+*PPT 第 50–51 页。*
+
+### EDI / Portal / B2B Marketplace（跨企业数据交换与访问）
+
+| Concept（概念） | 含义 | 区分角度 |
+|---|---|---|
+| **Electronic Data Interchange（EDI，电子数据交换）** | **Standardized computer-to-computer communication mechanism（标准化的计算机到计算机通信机制）** | 业务数据如何按共同标准在系统间交换 |
+| **Portal（门户）** | 业务伙伴访问 **Secured, Proprietary Data（受保护的专有数据）**的入口 | 谁通过什么入口访问数据，例如 Supplier Portal（供应商门户）、Customer Portal（客户门户） |
+| **B2B Marketplace（企业间交易市场）** | 由 **Third-party Vendors（第三方供应商）**运营的市场 | 多家企业通过第三方市场连接与交易 |
+
+数据交换既要让伙伴协同，也要关注 **Secure Communication（安全通信）**与专有信息保护。
+
+*PPT 第 53–54 页。*
+
+### SCM Systems（供应链管理系统）与模块
+
+**SCM Systems（供应链管理系统）**聚焦供应链改善，以支持 **Product Development & Innovation（产品开发与创新）**并 **Reduce Costs（降低成本）**。
+
+课件对比：**Standalone SCM（独立 SCM）**主要自动化物流环节；与 **ERP / CRM 紧密集成的 SCM**可以结合不同系统的数据支持决策。
+
+| 模块方向 | 主要问题 | 课件功能例子（按用途归纳） |
+|---|---|---|
+| **Supply Chain Planning（供应链计划）** | 需求与资源如何安排？ | Demand Planning & Forecasting（需求规划与预测）、Safety Stock Planning（安全库存规划）、Distribution Planning（分销规划）、Supply Network Collaboration（供应网络协作） |
+| **Supply Chain Execution（供应链执行）** | 如何落实业务活动？ | Materials Management（物料管理）、Manufacturing Execution（制造执行）、Order Promising（订单交付承诺）、Transportation Execution（运输执行）、Warehouse Management（仓库管理） |
+| **Supply Chain Visibility & Analytics（供应链可视化与分析）** | 表现如何、哪里需要调整？ | Supply Chain Analytics（供应链分析）：监控 **KPIs（关键绩效指标）**，评估供应链表现 |
+
+**Order Promising（订单交付承诺）**回答产品是否可供、成本与交期等问题；**Visibility（可视化）**提供观察供应链状态的能力，**Analytics（分析）**帮助评价与判断。
+
+*PPT 第 55–56 页；三类方向与具体功能来自本页及 Table 8.1，表中归类为复习整理。*
+
+## Week 7 总结（一图总结）
+
+![Week 7 一图总结：吉伊、小八与乌萨奇讲解企业系统、ERP 与 SCM](assets/week-07-summary.png)
+
+**复习时先分清：**
+
+- **Order-to-Cash / Procure-to-Pay**：销售收款 / 采购付款；**MTS / MTO**：先生产备货 / 订单拉动生产。
+- **BPM / Customization / Configuration**：改业务流程 / 改软件 / 调系统设置；标准版本也需要配置。
+- **ERP / SCM / CRM**：企业内部整合 / 供应链协同 / 客户关系，三者可以集成；ERP 的收益也伴随锁定与灵活性权衡。
+
+**一句话：跨部门流程需要共享数据，ERP 将内部业务整合起来，SCM 再将协同延伸到供应网络；实施时还要处理业务适配、控制权和组织变革。**

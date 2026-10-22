@@ -1,6 +1,6 @@
 # 每周一图总结：生成提示词
 
-生成方式：内置 image_gen 工具。内容来源：同目录课程笔记 Week 1–6。每周一张，中英双语，吉伊、小八、乌萨奇的可爱手账风格。
+生成方式：内置 image_gen 工具。内容来源：同目录课程笔记 Week 1–7。每周一张，中英双语，吉伊、小八、乌萨奇的可爱手账风格。
 
 ## Week 1
 
@@ -99,6 +99,78 @@ Title: "Week 6｜电商转化与平台角色" Subtitle: "E-Commerce II · 一图
 6 支付与外包：Trusted Payment 可信支付＝信任/安全/协调。Cryptocurrency 加密货币依靠数字签名/公共账本/去中心化共识；仍有费用和波动风险。外包 Marketplace 平台 / Solutions 建站 / Fulfillment 履约。
 7 平台角色三行（draw three clearly different flows）：C2C Marketplace：Seller A → B撮合 → Buyer C，B不买入；Managed C2C：A → B鉴定/中介 → C，B不取得所有权；C2B2C Resale：A → B收购并持货 → C转售，B先取得所有权。
 Bottom: "Matching 撮合 ≠ Authentication 鉴定 ≠ Ownership & Resale 持货转售"
+
+## Week 7
+
+参考图：`week-06-summary.png`，仅用于延续系列风格。知识来源：`W7_preview.pdf`，共 58 个 PDF 页面（课件末页编号为 59）。
+
+Use case: scientific-educational
+Asset type: Week 7 university study-summary infographic, portrait high resolution, bilingual Chinese-English.
+Image 1 is ONLY a style/composition/character reference from the existing Week 6 series. Create a NEW Week 7 poster with entirely new content below. Do not reuse Week 6 words, metrics or examples.
+Match its kawaii Chiikawa stationery aesthetic: recognizable Chiikawa 吉伊 (small white round character), Hachiware 小八 (white cat with blue cap-like head patches), Usagi 乌萨奇 (pale yellow long-eared rabbit), small expressive study/work poses. Ivory paper, pastel pink/blue/mint/yellow, dark-brown outlines, clear large readable Chinese and English, 7 numbered concept panels and a final memory ribbon. Characters support the explanation, about 15% of area. Generous margins, no clipped text, no watermark, no university logos. Render these study facts accurately; use concise labels, arrows only where relationships make sense. Keep important distinctions exact.
+
+Title: "Week 7｜企业系统"
+Subtitle: "Enterprise Systems · ERP & SCM · 一图总结"
+
+1 "核心业务流程 Core Processes"
+"Order-to-Cash 订单到收款：销售给客户，收回货款"
+"Procure-to-Pay 采购到付款：向供应商采购，支付货款"
+"Make-to-Stock 按库存生产：Push 推式，先生产备货"
+"Make-to-Order 按订单生产：Pull 拉式，先有订单"
+Visual: order, payment, inventory, production. Distinguish customer payment coming in from supplier payment going out.
+
+2 "企业整合 Enterprise Integration"
+"Best-of-Breed：各领域独立的最佳系统"
+"Enterprise System：跨职能整合的应用套件"
+"Central Database 共享数据库"
+Show sales, inventory, finance connected to ONE shared logical database, with bidirectional connections.
+"ERP 管内部；SCM 连供应商；CRM 连客户"
+
+3 "实施决策 Implementation"
+"Buy or Build? 购买还是自建？"
+Buy → "Standard Fit? 标准软件适配？"
+Yes → "Configuration 配置"
+No → two alternatives "BPM 调整业务流程" or "Customization 修改软件" → Configuration.
+Build → Configuration as separate branch.
+"Vanilla 标准版本；Configuration 设置规则；Customization 改软件"
+"定制需考虑后续维护与升级"
+
+4 "ERP 企业资源规划"
+"Common Database 共同数据库"
+"Integrated Modules 集成模块"
+"Consistent Interfaces 一致界面"
+"选型：Control 控制权 + Business Requirements 业务需求"
+"Core 核心：财务 / 运营 / 人力资源"
+"Extended 扩展：SCM / CRM"
+"收益：全球整合、合规与审计"
+"代价：System Lock-in 系统锁定；整合与灵活性的权衡"
+
+5 "供应网络 Supply Network"
+"Upstream 上游供应商 → 企业 → Downstream 下游客户"
+"可靠供应：Right Quantity / Quality / Price / Time"
+Chinese labels: "数量 / 质量 / 价格 / 时间"
+"长期关系、信息共享、活动协调"
+"Ripple Effects 涟漪效应：一处中断可能影响整个网络"
+
+6 "跨企业数据协同 Data Coordination"
+"EDI 电子数据交换：标准化、计算机到计算机"
+"Portal 门户：伙伴访问受保护专有数据的入口"
+"B2B Marketplace：第三方运营的交易市场"
+"三者分别强调数据交换机制、访问入口、市场组织"
+
+7 "SCM 供应链管理"
+"Planning 计划：需求预测、库存与分销规划"
+"Execution 执行：物料、生产、运输、仓储"
+"Visibility & Analytics 可视化与分析：监控绩效、辅助判断"
+"与 ERP / CRM 集成，利用跨系统数据支持决策"
+Small closing note: "落地需要：高层支持、外部专家、用户培训、多学科协作、持续演进"
+
+Bottom ribbon: "跨部门流程 → 共享数据 → 企业整合 → 跨企业协同"
+Do not assert SCM and CRM are always inside ERP; they can be standalone or integrated. Do not confuse configuration with code customization. MTS vs MTO must remain correct. This is a conceptual study poster, not a marketing ad.
+
+### Week 7 局部校对提示
+
+Edit ONLY panel 3 titled 实施决策 Implementation on this Week 7 poster. Preserve all other panels, every other text label, Chiikawa characters, colors, overall size and layout unchanged. The current panel 3 has a misleading arrow from Configuration back up into Customization. Replace the body of panel 3 with a clean, very legible numbered text-and-small-icon checklist, NOT a decision-flowchart, and no connecting arrows. Exact content: '① Buy or Build? 购买还是自建？' then '② Fit 适配检查' then '标准软件适配：使用 Vanilla 标准版本' then '存在差距：BPM 调整流程 / Customization 修改软件' then '③ Configuration 配置' then '把数据格式、业务规则、审批流程设为系统参数' then a small highlighted footer '标准版本仍需配置；软件定制须考虑维护与升级成本。' Keep panel 3 title and border. Put cute small icons beside checklist items. Remove every old arrow and box inside this panel, especially the bottom Configuration → Customization route. All other artwork and text exactly unchanged. Accurate Chinese characters and readable English.
 
 ## 校对与局部修订提示
 

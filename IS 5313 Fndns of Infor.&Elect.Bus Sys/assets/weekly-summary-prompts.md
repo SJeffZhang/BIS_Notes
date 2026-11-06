@@ -1,6 +1,6 @@
 # 每周一图总结：生成提示词
 
-生成方式：内置 image_gen 工具。内容来源：同目录课程笔记 Week 1–7。每周一张，中英双语，吉伊、小八、乌萨奇的可爱手账风格。
+生成方式：内置 image_gen 工具。内容来源：同目录课程笔记 Week 1–9。每周一张，中英双语，吉伊、小八、乌萨奇的可爱手账风格。
 
 ## Week 1
 
@@ -179,3 +179,102 @@ Edit ONLY panel 3 titled 实施决策 Implementation on this Week 7 poster. Pres
 - Week 1：Correct exactly one arrow direction in panel 4. The feedback loop must be Input → Processing → Output → Feedback → Input. Reverse only the right-hand curved pink arrow so it starts at Output and points into Feedback. Keep Feedback → Input unchanged.
 - Week 3：Replace both incorrect Chinese usage pricing headings with 用量计费. Keep Usage-based / Usage and supporting explanations. Replace the Outcome tile Chinese heading with 结果计费. Preserve all other content.
 - Week 4：Correct the Network Effects table to 同侧正向 / Same-side Positive, 同侧负向 / Same-side Negative, 跨侧正向 / Cross-side Positive, 跨侧负向 / Cross-side Negative. Replace the purple revenue tile Chinese heading with 用量计费; keep Usage-based and 按使用量收费。
+
+
+## Week 8
+
+Use case: scientific-educational
+Asset type: finished high-resolution portrait study-summary infographic in Chinese and English for IS5313 notes.
+Create a matching cute Chiikawa anime stationery study poster with recognizable Chiikawa 吉伊 (white round character), Hachiware 小八 (white cat with blue head patches), and Usagi 乌萨奇 (pale yellow long-eared rabbit), learning and explaining. Ivory paper, pastel pink, sky blue, mint and butter yellow, dark brown hand-drawn outlines, expressive tiny poses, limited stars. Characters about 12% of area; information and typography take priority. A polished, legible portrait poster, preferably 1536x2304 or larger. Seven clearly numbered panels with generous spacing, concise bilingual labels. Render the supplied text accurately, avoid invented claims, no tiny illegible filler, no watermark. Do not write the prompt scaffolding. Use mini visual examples to aid understanding. Keep arrow directions correct. All seven panels and footer must fit without clipping.
+
+Title: "Week 8｜供应链与客户关系"
+Subtitle: "SCM & CRM · 一图总结"
+Panel 1: "SCM 三大模块"
+"Planning 计划：需求预测、分销、生产、库存与安全库存"
+"Execution 执行：产品流、信息流、资金流"
+"Visibility & Analytics 可视化与分析：看状态与风险，用 KPI 评估表现"
+Panel 2: "计划与三流 Planning & Flows"
+"历史销量 ≠ 全部需求：停业、缺货、促销都会影响数据"
+"Safety Stock 安全库存：应对供需不确定性"
+Draw Supplier 供应商 → Production 生产 → Distribution 分销 → Customer 客户. Product flow 产品流 generally forward, include small separate return arrow "Reverse Logistics 逆向物流". Information flow 信息流 two-way. Financial flow 资金流 customer payments upstream. Labels "RFID 识别与追踪 · XML 结构化数据交换".
+Panel 3: "SCM 收益与落地"
+"JIT：需要时到货，少量多次，降低库存"
+"VMI：供应商依据共享库存与销售数据补货"
+"Bullwhip Effect 牛鞭效应：终端需求小波动 → 上游订单大波动"
+"应对：共享信息、整合流程、加强协调"
+"CSR：可追溯召回、监督供应商责任"
+"实施：数据质量 + 信任 + 伙伴采用；KPI 要匹配竞争战略"
+Panel 4: "CRM 目标：长期客户关系"
+"Widen 拓宽：吸引新客户"
+"Lengthen 延长：保持现有客户满意"
+"Deepen 深化：提高客户盈利贡献"
+"整合多触点、多部门数据；CRM 也是企业级战略"
+Panel 5: "三类 CRM：做业务、懂客户、协同沟通"
+Three distinct cards:
+"Operational 运营型：销售自动化、客户服务、营销活动"
+"Analytical 分析型：分析客户行为与感知；更好模型 + 360° 客户视图"
+"Collaborative 协作型：跨部门、跨渠道一致沟通与服务"
+Use bidirectional links to indicate complementary cooperation, not a mandatory sequential pipeline.
+Panel 6: "Social CRM 与收益"
+"社交媒体监测：讨论量 Volume、情感 Sentiment、趋势、影响者"
+"提升满意度与留存，降低流失与获客成本 → 降低成本、增加收入"
+Panel 7: "管理与伦理"
+"客户导向文化 + 服务指标 + 员工培训 + 数据收集、分析与共享"
+"Privacy 隐私：收集多少？"
+"Differentiated Treatment 差别待遇：是否公平？"
+"Over-personalization 过度个性化：是否越界？"
+Footer: "SCM 协同供应网络；CRM 经营客户关系；技术、数据与组织共同创造价值"
+
+
+### Week 8 final correction
+
+Edit this Week 8 study poster with one precise correction only. In panel 2 "计划与三流 Planning & Flows", the yellow/gold horizontal line labeled "Financial flow 资金流（客户付款向上游）" currently has arrowheads at BOTH ends. This is incorrect for the illustrated customer payments. Remove ONLY its right-pointing arrowhead and leave ONLY the LEFT-pointing arrowhead, so customer payments clearly point from the Customer on the right toward the Supplier on the left. Do not change the text label, line position, colors, other flow arrows, reverse logistics, any content, typography, panel layout, characters, poster size, margins or footer. Preserve everything else exactly.
+
+## Week 9
+
+Use case: scientific-educational
+Asset type: finished high-resolution portrait study-summary infographic in Chinese and English for IS5313 notes.
+Create a matching cute Chiikawa anime stationery study poster with recognizable Chiikawa 吉伊 (white round character), Hachiware 小八 (white cat with blue head patches), and Usagi 乌萨奇 (pale yellow long-eared rabbit), learning and explaining. Ivory paper, pastel pink, sky blue, mint and butter yellow, dark brown hand-drawn outlines, expressive tiny poses, limited stars. Characters about 12% of area; information and typography take priority. A polished, legible portrait poster, preferably 1536x2304 or larger. Seven clearly numbered panels with generous spacing, concise bilingual labels. Render the supplied text accurately, avoid invented claims, no tiny illegible filler, no watermark. Do not write the prompt scaffolding. Use mini visual examples to aid understanding. Keep arrow directions correct. All seven panels and footer must fit without clipping.
+
+Title: "Week 9｜社交媒体与协作"
+Subtitle: "Social Media Communication & Collaboration · 一图总结"
+Panel 1: "先看任务，再选工具"
+"Virtual Teams 虚拟团队：跨地点、按需组建"
+A correct 2×2 matrix with columns "Same Place 同地" and "Different Place 异地"; rows "Same Time 同时" and "Different Time 异时".
+Cells sameplace/sametime "面对面会议"; differentplace/sametime "视频会议"; sameplace/differenttime "共享工作站接力"; differentplace/differenttime "邮件、论坛".
+"Intranet 内联网：授权内部访问；Employee Portal 员工门户：自助服务、定制访问、最小权限"
+Panel 2: "Web 1.0 → Web 2.0"
+"发布与阅读 → 参与、分享、共同创作"
+"UGC 用户生成内容"
+"更多相关参与者与贡献 → 更多有用连接与内容 → 更大价值"
+"参与多不保证质量高：还需要治理"
+Panel 3: "四种能力 Four Capabilities"
+Four clear cards:
+"Communication 沟通：交换消息与想法｜博客、微博、即时消息"
+"Cooperation 合作：共享资源、互利｜媒体分享"
+"Collaboration 协作：共同产出成果｜共享文档、CMS、集体智慧"
+"Connection 连接：建立关系、寻找专长｜社交网络、病毒式营销"
+"一个应用可以支持多种能力"
+Panel 4: "共享与共同创作"
+"Metadata 元数据：描述数据的数据"
+"Tagging 标签 → Folksonomy 用户生成分类体系"
+"Cloud Collaboration 云协作：存储、同步、共同编辑"
+"CMS 内容管理：发布、编辑、版本追踪、检索；按角色授权"
+Panel 5: "集体智慧与连接"
+"Collective Intelligence：群体为何能产生有用知识？"
+"Peer Production 对等生产：自组织社区共建｜开源软件、Wiki"
+"Crowdsourcing 众包：邀请广泛人群贡献｜微任务 HITs、开放创新"
+"Viral Marketing 病毒式营销：借助网络传播，提升品牌认知"
+Panel 6: "落地：技术只是其中一部分"
+"组织情境：贴合工作"
+"Critical Mass 临界规模：足够参与者"
+"Culture 文化：鼓励共享"
+"用户抗拒：说明改变的价值"
+"Wiki 低参与 → 贡献激励；信息过时 → 审核与内容负责人；安全 → 访问权限"
+Small note "TAM：有用、易用影响使用意愿，进而影响使用行为"
+Panel 7: "收益与风险"
+"协作 → 生产率、质量、创新、客户服务 → 财务表现"
+"控制权向用户转移：负面口碑可能快速扩散，评论也可能失真"
+"Crisis Response 危机响应：建团队 → 预判风险 → 监测互动 → 快速行动"
+"课件强调：最初 24 小时很关键；互联网有记忆"
+Footer: "任务匹配工具 + 参与和治理 → 共同成果；传播带来价值，也带来风险"

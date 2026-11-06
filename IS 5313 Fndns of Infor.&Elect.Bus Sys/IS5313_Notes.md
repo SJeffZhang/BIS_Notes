@@ -2030,3 +2030,381 @@ ERP 由 **MRP / MRP II**演进而来，其作用已经超出单纯的“资源�
 - **ERP / SCM / CRM**：企业内部整合 / 供应链协同 / 客户关系，三者可以集成；ERP 的收益也伴随锁定与灵活性权衡。
 
 **一句话：跨部门流程需要共享数据，ERP 将内部业务整合起来，SCM 再将协同延伸到供应网络；实施时还要处理业务适配、控制权和组织变革。**
+
+---
+
+# Week 8（第八周：Supply Chain & Customer Relationship Management / 供应链与客户关系管理）
+
+**主线：SCM Planning（计划）→ Execution（执行）→ Visibility & Analytics（可视化与分析）→ SCM 的收益与实施 → CRM 的目标、架构与管理。**
+
+*页码按课件右下角标注：W8 第 1–45 页与 PDF 页码一致；从课件第 47 页起，课件页码比 PDF 页码大 1。W7 已介绍的 SCM 定义与模块不再重复展开。*
+
+## SCM Planning（供应链计划）：把需求转化为资源安排
+
+**Supply Chain Planning（供应链计划）**：制定各种资源计划，支持商品与服务的 **Efficient and Effective Production（高效率且有效的生产）**。
+
+| Planning（计划） | 主要回答什么问题？ |
+|---|---|
+| **Demand Planning & Forecasting（需求规划与预测）** | 客户会需要多少？将需求预测与供应能力协调起来 |
+| **Distribution Planning（分销计划）** | 如何把产品或服务送达消费者？涉及仓储、配送、开票与收款，并衔接 **Transportation Plan（运输计划）** |
+| **Production Planning（生产计划）** | 如何安排物料、设备和劳动力，以及测试、包装、交付准备？ |
+| **Inventory & Safety Stock Planning（库存与安全库存计划）** | 需要多少库存？如何缓冲供需的不确定性，并衔接 **Sourcing Plan（采购 / 寻源计划）**？ |
+
+**Safety Stock（安全库存）**用于应对 **Uncertainty in Supply and Demand（供应与需求的不确定性）**。各项计划互相制约，需要跨供应商、生产、分销与客户协调。
+
+*PPT 第 9–10、17–20 页。*
+
+### Demand Forecasting（需求预测）：不能只看历史销量
+
+奶茶店案例中，销量大多在约 100–115 杯附近，但出现三种特殊情况：
+
+- **Store Closure（暂时停业）**：第 4 周售出 62 杯，可能是装修缩短营业时间。
+- **Stockout（缺货）**：第 8 周售出 65 杯，库存不足会造成 **Lost Sales（流失销售）**。
+- **Promotion / Holiday（促销 / 假期）**：第 10 周售出 198 杯，可能由一次性活动推动。
+
+> **辅助理解：Observed Sales（观察到的销量）不一定等于真实需求。** 不能把缺货造成的低销量直接解释成需求下降，也不能把促销高峰直接当成今后的常态。
+
+课件强调 **Collaborative Demand and Supply Planning（需求与供应协同计划）**：结合销售、库存、促销和运营信息解释波动；面对难以预测的波动，可缩短预测时间范围。
+
+**预测特别困难的情形**：Demand Spikes / Extreme Events（需求激增 / 极端事件）、Intermittent Demand（间歇性需求，如机器备件）、Shifting Demand Patterns（需求模式改变）、New Products without History（没有历史数据的新品）。这些都需要历史销量之外的信息。
+
+*PPT 第 11–16 页；案例数值来自第 15 页图。*
+
+## SCM Execution（供应链执行）：让计划运转起来
+
+**Supply Chain Execution（供应链执行）**是将供应链计划付诸行动，协调 **Product Flow（产品流）、Information Flow（信息流）、Financial Flow（资金流）**。
+
+![供应链执行三流：产品、信息与资金在供应商、生产、分销和消费之间流动](assets/w8-slide23-supply-chain-flows.png)
+
+*课件原图：W8 第 23 页；源图为 Information Systems Today，Figure 8.8。*
+
+| Flow（流） | 内容与方向 | 系统支持与关键点 |
+|---|---|---|
+| **Product Flow（产品流）** | 供应商 → 生产 → 分销 → 消费者；还包括反向回收 | **Forward Logistics（正向物流）**负责送达；**Reverse Logistics（逆向物流）**从消费端接收退回产品，以 **Recapture Value（回收价值）** |
+| **Information Flow（信息流）** | 订单、配送状态与更新等沿供应链双向传递 | 共享数据库减少纸面传递；**EDI（电子数据交换）**支持系统间交换 |
+| **Financial Flow（资金流）** | 资金资产及相关信息流转；图中付款由消费端向上游传递 | 包括付款安排、所有权、商业信用；通过 **Escrow（托管）**等支付保障管理风险 |
+
+**RFID（Radio Frequency Identification，射频识别）**用于识别和追踪物品，支持物流活动。**XML（Extensible Markup Language，可扩展标记语言）**用于在 Web 上交换结构化数据，可定义适合业务领域的标签，例如 **XBRL**。
+
+> **辅助区分**：EDI 侧重系统间标准化交换；XML 是表示与交换结构化数据的一种格式。课件也展示 TXT、JSON，不能把 EDI 和 XML 当作同义词。
+
+**Payment Methods（支付方式）**的风险分配不同：课件图中，**Cash-in-Advance（预付款）**对出口商更安全，**Consignment（寄售）**对进口商更有利；还列出 **Open Account（赊账）、Documentary Collections（跟单托收）、Letters of Credit（信用证）**。重点是双方承担的风险可能相反。
+
+*PPT 第 22–30 页。*
+
+## Visibility & Analytics（可视化与分析）：看状态，也看表现
+
+| Concept（概念） | 定义与作用 | 关键手段 |
+|---|---|---|
+| **Supply Chain Visibility（供应链可视化）** | 追踪产品在供应链中的移动，并预见可能影响供应链的外部事件 | **IoT / Sensors / GPS（物联网 / 传感器 / 定位）**实时监控；供应商地点、天气、政治风险、劳资纠纷等风险信息 |
+| **Supply Chain Analytics（供应链分析）** | 使用 **KPIs（关键绩效指标）**监控采购、计划、生产、分销等整条供应链的表现 | 衡量服务、效率、成本等，并根据企业竞争战略安排指标优先级 |
+
+**Visibility**回答“现在发生了什么、接下来可能发生什么”；**Analytics**帮助判断“表现如何、是否符合目标”。前者也依赖伙伴间 **Information Sharing and Trust（信息共享与信任）**。
+
+课件比较：A 公司准时交付率 **98%**、物流成本高；B 公司 **94%**、成本低。**There is no single best KPI for every company（没有适合所有公司的单一最佳指标）**，不能仅凭准时交付率判定谁更好。
+
+*PPT 第 32–35 页。*
+
+## SCM Benefits & Challenges（供应链管理的收益与挑战）
+
+| Benefit（收益） | 如何实现？ | 需要注意什么？ |
+|---|---|---|
+| **Just-in-Time（JIT，准时制生产）** | 物料在生产需要时到达；**Smaller, More Frequent Deliveries（少量、多次交货）** | 降低库存、仓储成本和过时风险；需要供应链伙伴紧密协调 |
+| **Vendor-Managed Inventory（VMI，供应商管理库存）** | 供应商监测客户库存与持续销售数据，并负责补货决策 | 依据约定的 **Service Levels（服务水平）**运作，需要信息共享 |
+| **Reduce the Bullwhip Effect（减轻牛鞭效应）** | 整合业务流程、共享信息、改善网络协调 | **终端需求的小波动，可能引起上游更大的订单波动**；原因包括信息失真、安全库存调整和预测误差 |
+| **Corporate Social Responsibility（CSR，企业社会责任）** | 追踪产品来源与受影响批次以精准召回；监控供应商劳动与环境实践 | 前者依赖 **Traceability（可追溯性）**，后者依赖 **Transparency（透明度）** |
+
+> **区分 JIT 与 VMI**：JIT 关注“物料何时到、库存如何降低”；VMI 关注“由谁依据共享数据决定补货”。二者可以配合。
+
+**实施的三项挑战**：
+
+1. **Data Quality & Usage（数据质量与使用）**：进入系统的信息要准确、完整。
+2. **Trust & Information Sharing（信任与信息共享）**：协调需求与专有信息保护之间取得平衡。
+3. **Partner Adoption（伙伴采用）**：让独立伙伴愿意或能够使用兼容系统。
+
+*PPT 第 37–42 页。*
+
+## CRM（客户关系管理）：经营长期客户价值
+
+### Why CRM?（为什么需要 CRM？）
+
+**Customer Empowerment（客户赋权）**：客户更容易获取信息、比较与选择，**Word of Mouth（WOM，口碑）**影响更强。企业因此需要同时关注新业务和现有客户的重复购买，经营 **Long-term Customer Relationships（长期客户关系）**。
+
+| Capturing Customer Value（获取客户价值） | 课件含义 |
+|---|---|
+| **Widen（拓宽）** | **Attract New Customers（吸引新客户）** |
+| **Lengthen（延长）** | **Keep Current Customers Satisfied（保持现有客户满意）**，延续关系 |
+| **Deepen（深化）** | **Transform Minor Customers into Profitable Customers（将贡献较小的客户发展为有盈利贡献的客户）** |
+
+挑战在于 **Multiple Customer Touchpoints（多个客户触点）**和 **Fragmented Customer Information（客户信息碎片化）**：电话、网站、门店、App、社交媒体都有互动，数据却分散在销售、营销、客服等部门。
+
+**维修案例**：客服要把过往投诉 / 沟通记录、购买日期 / 保修、诊断维修历史、维修 / 换货状态连起来，才能避免重复询问并提供准确答复。
+
+*PPT 第 44–45、47–49 页。*
+
+### Definition & Architecture（定义与架构）
+
+**CRM Systems（客户关系管理系统）**：借助可靠的系统、流程与程序，集中处理 **Downstream Information Flows（面向下游客户的信息流）**，建立并维持持久客户关系的技术。可采用 **Packaged Software（套装软件）/ SaaS**。
+
+**CRM 也是 Corporate-level Strategy（企业级战略）**：吸引潜在客户、培养客户忠诚度、维持正面企业形象。
+
+![CRM 架构：运营型、分析型与协作型相互连接，支持客户互动和管理决策](assets/w8-slide51-crm-architecture.png)
+
+*课件原图：W8 第 51 页（PDF 第 50 页）；源图为 Information Systems Today，Figure 8.14。*
+
+| Type（类型） | 核心作用 | 主要功能 / 输出 |
+|---|---|---|
+| **Operational CRM（运营型 CRM）** | 支持客户互动与服务，把业务活动执行好 | **Sales Force Automation（销售队伍自动化）**、**Customer Service & Support（客户服务与支持）**、**Enterprise Marketing Management（企业营销管理）** |
+| **Analytical CRM（分析型 CRM）** | 分析客户行为与感知，识别机会并改善服务 | 数据仓库、数据挖掘与可视化、商业智能等；形成 **Better Models（更好的模型）**和 **360-degree Customer View（客户全景视图）** |
+| **Collaborative CRM（协作型 CRM）** | 让整个组织与客户有效、高效地沟通 | 共享工单、**Omnichannel Communication（全渠道沟通）**，保持跨部门、跨渠道的服务衔接 |
+
+**Operational CRM 的三个分支：**
+
+- **Sales Force Automation**：自动化销售相关流程，支持销售人员、销售经理和营销经理等角色。
+- **Customer Service & Support**：通过 **Customer Engagement Center（客户互动中心）**及自助 / 人工辅助服务，提高效率与质量，如 **First-contact Resolution Rate（首次联系解决率）**。
+- **Enterprise Marketing Management**：管理营销活动，支持 **Targeted & Personalized Marketing（定向与个性化营销）**。
+
+**Analytical CRM 的数据与输出**：把购买历史、服务记录、浏览行为等汇合起来，识别 **Profitable Customers（高盈利客户）、Market Segments（市场细分）、Customer Profiles（客户画像）、Churn Rates（客户流失率）**。客户全景视图强调整合相关信息，帮助理解客户。
+
+> **辅助记忆**：Operational = 做业务；Analytical = 懂客户；Collaborative = 协同沟通。三者相互支持，不能把所有客户数据分析都归为运营型 CRM。
+
+*PPT 第 50–61 页。*
+
+### Social CRM（社交客户关系管理）
+
+**Social CRM**是使用社交媒体管理客户关系。**Social Media Monitoring（社交媒体监测）**追踪线上讨论，分析 **Volume（讨论量）、Sentiment（情感倾向）、Trends（趋势）**，并识别 **Influencers（有影响力的人）**。
+
+**辅助理解**：讨论多不一定评价好；讨论量和情感要分开看。
+
+*PPT 第 63 页。*
+
+### Benefits, Strategy & Ethics（收益、战略与伦理）
+
+**收益**：销售侧关注满意度、留存与流失；客服侧关注服务效率；营销侧关注直接营销成本与获客成本。总体目标是 **Lower Costs and Revenue Growth（降低成本与增加收入）**。
+
+**落地要求**：客户导向的政策与业务流程、客户服务指标、员工培训，以及数据收集、分析和共享。
+
+| Ethical Concern（伦理问题） | 需要追问什么？ |
+|---|---|
+| **Privacy（隐私）** | 应收集多少客户数据？ |
+| **Differentiated Treatment（差别待遇）** | 定向营销什么时候会造成不公平待遇？ |
+| **Over-personalization（过度个性化）** | 个性化什么时候越过了客户能接受的边界？ |
+
+*PPT 第 64–66 页。*
+
+## Week 8 总结（一图总结）
+
+![Week 8 一图总结：吉伊、小八与乌萨奇讲解供应链计划、执行、分析与客户关系管理](assets/week-08-summary.png)
+
+**复习时先分清：**
+
+- **Planning / Execution / Visibility & Analytics**：安排资源 / 协调三流 / 监测状态、风险和绩效；**JIT / VMI / Bullwhip Effect**分别关注到货与库存、补货决策、上游波动放大。
+- **Operational / Analytical / Collaborative CRM**：执行客户业务 / 分析与形成全景视图 / 跨部门跨渠道沟通；**Widen / Lengthen / Deepen**是客户价值的三个方向。
+
+**一句话：SCM 用协同信息改善供应网络，CRM 用整合信息经营长期客户关系；两者都需要可信数据、组织配合与适当的信息边界。**
+
+---
+
+# Week 9（第九周：Social Media Communication & Collaboration / 社交媒体沟通与协作）
+
+**主线：团队协作需求 → 时间 / 地点与工具匹配 → Web 2.0 与社会化商务 → 四种能力 → 企业落地与风险管理。**
+
+*页码按课件右下角标注：W9 从 PDF 第 2 页开始，课件页码比 PDF 页码大 1。*
+
+## Collaboration & Virtual Teams（协作与虚拟团队）
+
+**Collaboration（协作）**：与他人共同努力，达成 **Shared and Explicit Goals（共同且明确的目标）**。
+
+**Virtual Teams（虚拟团队）**：成员来自不同地理位置，按任务需要组建，成员组成可以变化（**Fluid Membership**）。课件的小组报告案例暴露四类问题：决策不清、资源分散、版本冲突、专长难找。
+
+### Time / Place Matrix（时间 / 地点矩阵）：按任务选工具
+
+**Synchronous（同步）**表示同时互动，**Asynchronous（异步）**表示不同时间互动。选择工具要考虑任务的 **Urgency（紧迫性）**和 **Nature（性质）**。
+
+![协作工具时间与地点矩阵：同时或异时、同地或异地](assets/w9-slide12-time-place-matrix.png)
+
+*课件原图：W9 第 12 页（PDF 第 11 页）；源图为 Information Systems Today，Figure 5.3。*
+
+| 时间 / 地点 | Same Place（同地） | Different Place（异地） |
+|---|---|---|
+| **Same Time（同时 / 同步）** | Face-to-face Interaction（面对面互动）：会议、共享显示屏 | Remote Interaction（远程互动）：视频会议 |
+| **Different Time（异时 / 异步）** | Continuous Task（连续任务）：不同时间使用共享工作站接力完成工作 | Communication & Coordination（沟通与协调）：讨论论坛、电子邮件 |
+
+> **辅助理解**：急需讨论、即时澄清可用同步工具；需要留痕、跨时区参与可用异步工具。分类看具体使用方式，同一工具也可能支持多种场景。
+
+*PPT 第 7–12 页。*
+
+### Intranet & Employee Portal（内联网与员工门户）
+
+- **Intranet（内联网）**：使用 Web 技术的 **Private Network（私有网络）**，提供授权内部信息访问、实时访问、企业搜索及协作。
+- **Employee Portal（员工门户）**：面向员工的入口，支持 **Self-service（自助服务）**、**Customized Access（定制化访问）**与 **Least Privilege（最小权限）**。
+
+**辅助区分**：内联网侧重内部网络与信息环境；门户侧重用户进入信息和服务的入口。能进入内联网，不代表可以访问所有内部资料。
+
+*PPT 第 13 页。*
+
+## The Evolving Web（Web 的演进）
+
+| 维度 | Web 1.0 | Web 2.0 |
+|---|---|---|
+| **中心** | **Publishing-centered（以发布为中心）** | **Participatory（参与式）** |
+| **用户活动** | 消费内容、寻找信息 | 消费并贡献内容、分享与共同创作 |
+| **连接对象** | Connect Ideas（连接想法） | Connect Ideas and People（连接想法与人） |
+
+**User-generated Content（UGC，用户生成内容）**：用户创建并分享内容。
+
+**Participation & Network Effects（参与与网络效应）**的课件逻辑：更多相关参与者与贡献 → 更多有用的连接和内容 → 更大的用户价值。**更多参与不自动等于更高质量**，还需要 **Critical Mass（临界规模）**与 **Governance（治理）**。
+
+**Social Media / Social Software（社交媒体 / 社会化软件）**：支持协作和社会化分享的 Web 应用，让人们沟通、互动与协作。
+
+**Social Business（社会化商务）**：使用社会化平台和工具连接员工、客户、供应商，通过对话与信息透明支持创新和决策。它也涉及企业内部工作。
+
+*PPT 第 14–16 页。*
+
+## Four Capabilities（社交媒体支持的四种能力）
+
+| Capability（能力） | 核心作用 | 课件例子 | 对应报告小组的问题 |
+|---|---|---|---|
+| **Communication（沟通）** | Exchange Messages and Ideas（交换消息与想法） | Blog（博客）、Microblogging（微博客）、Instant Messaging（即时消息） | 决策或消息不清 |
+| **Cooperation（合作 / 资源共享）** | Share Resources for Mutual Benefit（共享资源以互利） | Media Sharing（媒体分享），利用元数据与标签组织内容 | 资源分散、难找 |
+| **Collaboration（协作 / 共同产出）** | Work toward a Shared Outcome（共同形成一个成果） | 云协作、CMS、集体智慧 | 多版本冲突、成果难整合 |
+| **Connection（连接）** | Build Relationships and Find People or Knowledge（建立关系，寻找人员或知识） | 社交网络、病毒式营销 | 找不到所需专长 |
+
+> **一个应用可以支持多种能力**。区分依据是它在具体任务中主要帮助做什么：发消息、共享资源、共同产出，还是连接人和知识。
+
+*PPT 第 8、17、44、63 页。*
+
+### Communication & Cooperation（沟通与资源共享）
+
+**Communication**：通过博客、微博客、即时消息交换想法；**Hashtags（话题标签）**聚合话题，**Multimodal Content（多模态内容）**结合文字、图片、视频等。
+
+**Cooperation**：分享已有资源供彼此使用，例如把视频嵌入博客；重点是资源共享，不一定共同编辑同一成果。
+
+| Concept（概念） | 含义与作用 |
+|---|---|
+| **Metadata（元数据）** | **Data about Data（描述数据的数据）**，帮助理解和检索内容 |
+| **Tagging（添加标签）** | 为内容添加描述性标签，使共享内容容易找到 |
+| **Folksonomy（用户生成的分类体系）** | 用户通过标记形成分类，例如 **Social Bookmarking（社会化书签）** |
+
+*PPT 第 18–22 页。*
+
+### Collaboration（协作）：共同产出，而非堆积文件
+
+课件展示了两种常见问题：**Parallel Work（并行分工）**后文件难整合；**Sequential Handoff（顺序交接）**后出现多个“最终版”。重点是让团队围绕共同成果工作，并保留明确版本与修改记录。
+
+**1. Cloud-based Collaboration（云端协作）**
+
+- 跨设备存储、同步和共享文件，例如 Dropbox。
+- 共同编辑、评论，例如 Google Docs。
+- 选择 **Single-purpose Tools（单一用途工具）**或 **Integrated Productivity Suites（集成生产力套件）**。
+- 局限包括网络连接、数据安全与使用培训。
+
+**2. Content Management System（CMS，内容管理系统）**
+
+支持数字内容的 **Publish（发布）、Edit（编辑）、Version Track（版本追踪）、Retrieve（检索）**；提供友好界面和 **Role-based Access Control（基于角色的访问控制）**。
+
+可扩展内容发布、工作流或学习活动等功能，课件例子包括 WordPress、微信公众号平台、SharePoint 与学习管理系统。
+
+*PPT 第 23–27 页。*
+
+### Collective Intelligence（集体智慧）：把分散知识汇集起来
+
+**Collective Intelligence（集体智慧）**：具有不同信息与专长的群体，可能比单个专家产生更好的知识或方案，即 **Wisdom of the Crowd（群体智慧）**。
+
+| Concept（概念） | 主要回答什么？ | 课件例子与特点 |
+|---|---|---|
+| **Collective Intelligence（集体智慧）** | 为什么群体能产生有用知识？ | 汇集多样信息与专长；并非人数越多就必然正确 |
+| **Peer Production（对等生产）** | 自组织社区如何共同创造产品或服务？ | **Open-source Software（开源软件）**、**Wikis（维基）** |
+| **Crowdsourcing（众包）** | 组织如何邀请更广泛的人贡献时间与专长？ | **Micro-task Marketplaces（微任务市场）**、**Human Intelligence Tasks（HITs，人类智能任务）**、开放创新 |
+
+- **Open-source Software**：自愿参与、增量贡献；课件强调软件选择、安全性、灵活性与可审计性等潜在收益，以及对社区的回馈。
+- **Wikis**：成员可以创建、编辑、删除内容并讨论修改；数据库保留 **Revision History（修订历史）**，可形成 **Internal Knowledge Repositories（内部知识库）**。
+- **Crowdsourcing**：借助广泛参与者完成任务或生成方案，可降低任务完成成本；也可在企业内部设置微任务市场。
+
+> **辅助区分**：集体智慧是知识汇聚的逻辑；对等生产与众包是组织贡献的方式。开源能被检查不代表天然无漏洞，贡献多也需要审核与协调。
+
+*PPT 第 28–37 页。*
+
+### Connection（连接）：找人、建立关系与扩散
+
+**Social Networking（社交网络）**：围绕兴趣、位置等形成在线社区，受 **Network Effects（网络效应）**影响。课件区分 **General-interest Networks（综合兴趣网络）**、**Professional Networks（职业网络）**与 **Enterprise Social Networks（企业社交网络）**；企业既可连接内部员工，也可连接客户与外部利益相关者。
+
+**Viral Marketing（病毒式营销）**：利用网络效应扩散内容，提升 **Brand Awareness（品牌认知）**。课件建议：
+
+- 做出人意料、能引起感受的内容，并可制作续作。
+- 让内容容易分享与分发，减少访问障碍。
+- 创造 **Shareable Experiences（可分享的体验）**。
+
+*PPT 第 38–43 页。*
+
+## Business Value & Implementation（商业价值与企业落地）
+
+### Business Value（商业价值）
+
+协作可改善 **Productivity（生产率）**：更快解题与知识共享、减少错误；**Quality（质量）**：更快纠错、减少延误；**Innovation（创新）**：更多样的想法与集体智慧；**Customer Service（客户服务）**：更快、更有效地解决问题。
+
+这些改善可进一步支持 **Financial Performance（财务表现）**，包括盈利能力、销售额与销售增长。
+
+*PPT 第 45 页。*
+
+### Technology Is Only Part of the System（技术只是系统的一部分）
+
+![企业社会化工具落地因素：文化、临界规模、组织情境、安全、技术整合等](assets/w9-slide46-enterprise-social-media-factors.png)
+
+*课件原图：W9 第 46 页（PDF 第 45 页）；源图为 Information Systems Today，Figure 5.18。*
+
+| 课件强调的组织问题 | 为什么重要？ | 管理含义 |
+|---|---|---|
+| **Organizational Context（组织情境）** | 企业的任务、权限与责任不同于公共 Web | **Don't Copy the Web. Fit the Work（贴合工作，不能照搬公共网络）** |
+| **Critical Mass（临界规模）** | 参与者不足时，内容与连接的价值有限 | **No Users, No Network Effects（没有用户就没有网络效应）** |
+| **Organizational Culture（组织文化）** | 员工是否愿意贡献、共享和协作 | 建立鼓励共享的文化，并落实激励 |
+| **User Reactance（用户抗拒）** | 改变习惯与工具会遇到阻力 | 说明改变的理由与价值，提供支持 |
+
+图中还包括 **Technology Integration（技术整合）、Security（安全）、Hierarchies（层级）、Generation Gap（代际差异）、Technological Inertia（技术惯性）**等因素。
+
+**Wiki 案例（第 47–49 页）**：上海团队解决了设备故障，但方案只存在本地；广州团队之后遇到同样问题却无法复用。内部 Wiki 可沉淀知识，安装后仍须治理：
+
+- **Low Participation（低参与）** → 将知识贡献纳入绩效，鼓励使用。
+- **Outdated Information（信息过时）** → 建立审核规则，指定 **Content Owners（内容负责人）**。
+- **Information Security（信息安全）** → 设置访问权限。
+
+*PPT 第 46–53 页。*
+
+### Extension: Technology Acceptance Model（扩展：技术接受模型）
+
+课件第 54 页重点框出：**Perceived Usefulness（感知有用性）**与 **Perceived Ease of Use（感知易用性）**影响 **Behavioural Intention（使用意愿）**，进而影响 **Usage Behaviour（使用行为）**；易用性也影响有用性感知。
+
+**辅助理解**：“对工作有帮助”与“容易上手”都关系到采用；不能只提供账号就期待员工自然转用新工具。
+
+*PPT 第 54 页，扩展内容。*
+
+## Risks & Crisis Response（社交媒体风险与危机响应）
+
+**核心变化：Social Media Shifts Control of Information from Organizations to Users（社交媒体让信息控制权从组织转向用户）。**
+
+- **Microblogging（微博客）**：企业可控制自己发布什么，却难以控制传播范围。
+- **Social Networks（社交网络）**：难以控制别人发布的相关内容。
+- **Negative Experiences Going Viral（负面体验快速扩散）**：传播速度可能超过企业响应速度。
+- **Online Reviews（在线评论）**：不能把所有评论都当成可信证据，需考虑虚假或操纵。
+
+**课件的四步危机响应：**
+
+1. **Build a Crisis Team（建立危机团队）**：结合内部成员与外部专家。
+2. **Anticipate Potential Crises（预判潜在危机）**：识别风险与预警信号。
+3. **Monitor and Engage（监测与互动）**：持续关注社交媒体并及时回应。
+4. **Act Fast（快速行动）**：课件强调 **The First 24 Hours Count（最初 24 小时很关键）**。
+
+> **The Internet Never Forgets（互联网有记忆）**：发布与响应都可能留下持久记录。
+
+*PPT 第 55–61 页。*
+
+## Week 9 总结（一图总结）
+
+![Week 9 一图总结：吉伊、小八与乌萨奇讲解协作工具、社交媒体四种能力与企业管理](assets/week-09-summary.png)
+
+**复习时先分清：**
+
+- **Communication / Cooperation / Collaboration / Connection**：交换消息 / 共享资源 / 共同产出 / 建立连接；一个应用可支持多种能力。
+- **Collective Intelligence / Peer Production / Crowdsourcing**：群体智慧的逻辑 / 自组织社区共建 / 邀请广泛贡献；不应把三者直接当作同义词。
+
+**一句话：按任务的时间、地点和目标选择协作工具，再用参与激励、内容治理与权限管理促成共同成果；传播越开放，越需要准备风险响应。**
